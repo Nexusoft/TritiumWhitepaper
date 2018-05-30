@@ -94,11 +94,11 @@
   \vspace*{2\baselineskip}
 
   \textbf{with contributions by:}\par\medskip
-  \renewcommand\do[1]{%
+  \renewcommand\do[1]{%
     {
     \usevalue ##1:firstname \space \usevalue ##1:lastname \par}%
-    }
-  \docsvlist{#1}
+    }
+  \docsvlist{#1}
   \vspace*{2\baselineskip}
   
   \textbf{Edited by:}\par
@@ -107,7 +107,7 @@
   \\
   \vspace*{3\baselineskip}
   \includegraphics[width=0.33\textwidth]{./rsz_tritium.png}
-  \vspace*{1\baselineskip}
+  \vspace*{1\baselineskip}
   
 \begin{center}
 \textit{ad vocem populi}
@@ -217,13 +217,13 @@ Thus, cryptocurrency networks must balance the number of nodes required to provi
     \centering
     \vspace{-15pt}
     \hspace{0pt}
-    \includegraphics[width=0.58\textwidth]{./images/rsz_multicast.png}
+    \includegraphics[width=0.58\textwidth]{./images/rsz_multicast.png}
 \end{wrapfigure}
 
 Due to the limitations inherent in the basic operation of P2P flood networks, it becomes increasingly clear why distributed ledgers have difficulty scaling.
 Scalability is not always determined by the actual size of the ledger, or a state required to be held by all nodes, but also on how the messages route through the network.
 Tritium provides an optimized, efficient routing system called ``Multicast Locking Groups'' and is the first step towards Level 1 locking in a multidimensional chaining structure.
-As seen in the diagram above, IP multicast handles the packet replication on the Network layer rather than the Application layer, which significantly speeds up propagation time.
+As seen in the diagram above \cite{Mulicast}, IP multicast handles the packet replication on the Network layer rather than the Application layer, which significantly speeds up propagation time.
 The secondary benefit to running IP multicast in locking groups is that they begin to form parallelism on the Network layer, meaning that messages are broadcast to relevant nodes whilst preserving global consensus layers.
 The final benefit is that multicast locking groups can have access control to the groups, which would mean that nodes authorized to broadcast or verify from each of these groups could be easily validated on the ledger.
 
@@ -466,7 +466,7 @@ This will also provide the Logical layer the opportunity for encrypting data wit
 
 \section{Interface}
 
-The Interface layer will improve the accessibility of the Ledger layer by interacting through API calls and operation codes.
+The Interface layer will improve the accessibility of the Ledger layer by interacting through API calls and operation codes.
 Through two major areas of focus \textit{\textbf{viz.}} a decoupled daemon and modular design, interface design becomes simpler yet more powerful
 .
 Developers can focus on providing an intuitive and responsive UI instead of the intricacies of Blockchain design.
@@ -757,6 +757,10 @@ The OSI Reference Model and Protocols
 \bibitem{Flood_Networks}
 Unicast Flood Networks
 \url{https://www.studeersnel.nl/nl/document/avans-hogeschool/informatiebeveiliging/werkstukessay/paper-deep-en-dark-web/1320073/view}
+
+\bibitem{Mulicast}
+Classification of Multicast Routing Protocols
+\url{https://www.researchgate.net/figure/Classification-of-Multicast-Routing-Protocols_fig2_278023165}
 
 \bibitem{Big_O_Notation}
 Big O Notation
